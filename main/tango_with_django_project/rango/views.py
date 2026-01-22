@@ -1,26 +1,12 @@
 from django.shortcuts import render
-
-
 from django.http import HttpResponse
+from django.conf import settings
+
 
 def index(request):
-    html_content = """
-    <html>
-        <body>
-            <a>Rango says hey there partner!</a>
-            <a href="/rango/about/">About</a>
-        </body>
-    </html>
-    """
-    return HttpResponse(html_content)
+    context_dict = {'boldmessage': 'Crunchy, creamy, cookie, candy, cupcake!'}
+    return render(request, 'rango/index.html', context=context_dict)
 
 def about(request):
-    html_content = """
-    <html>
-        <body>
-            <a>Rango says here is the about page.</a>
-            <a href="/rango/">Index</a>
-        </body>
-    </html>
-    """
-    return HttpResponse(html_content)
+    context_dict = {'boldmessage': "This tutorial has been put together by 2975774s"}
+    return render(request, 'rango/about.html', context=context_dict)
