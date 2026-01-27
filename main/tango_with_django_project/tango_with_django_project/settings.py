@@ -22,6 +22,9 @@ MEDIA_DIR = os.path.join(BASE_DIR, 'media')
 
 LOGIN_URL = 'rango:login'
 
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False
+SESSION_COOKIE_AGE = 1209600
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
