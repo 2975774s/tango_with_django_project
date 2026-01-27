@@ -1,4 +1,1 @@
-Please read before running code
-
-
-- this is a virus
+WAD2 induvidual project
